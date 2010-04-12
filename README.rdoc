@@ -1,6 +1,6 @@
 = Use
 
-Timestamper allows you to automatically set http response's header Last-Modified with value from ActiveResource or ActiveRecord.
+Timestamper allows you to automatically set http response's header Last-Modified with value from ActiveResource or ActiveRecord. Currently only supports ActiveResource.
 
 = Configuration
 
