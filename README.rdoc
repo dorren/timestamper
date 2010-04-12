@@ -1,0 +1,16 @@
+= Use
+
+Timestamper allows you to automatically set http response's header Last-Modified with value from ActiveResource or ActiveRecord.
+
+= Configuration
+
+  Timestamper.config do
+    updated_at_column :updated_at  # global default column
+  end
+
+  class Article
+    timestamper_column :last_modified  # custom timestamp column
+  end
+
+To configure rack middleware in a Rails app, add following line to config/environment.rb.
+  ActionController::Dispatcher.middleware.use Timestamper::RackMiddleware
