@@ -9,7 +9,7 @@ class Timestamper
       status, headers, response = @app.call(env)
       if headers["Content-Type"].to_s =~ /^text\/html/
 
-        if headers['Last-Modified'].nil?
+        if status == 200 and headers['Last-Modified'].nil?
           timestamp = Timestamper.instance.updated_at || Time.now
           headers['Last-Modified'] = timestamp.httpdate
         end
