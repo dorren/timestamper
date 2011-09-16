@@ -1,7 +1,7 @@
 
 # testing fixtures
 class Content < ActiveResource::Base
-  self.site = ""
+  self.site = "http://example.org"
 end
 class Article < Content; end
 class Page    < Content; end
