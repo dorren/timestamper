@@ -11,6 +11,8 @@ Gem::Specification.new do |s|
   s.test_files     = Dir["spec/**/*"]
 
   s.add_dependency              "activeresource", "~> 3.0.0"
+  s.add_development_dependency  "rack-test"
   s.add_development_dependency  "rspec"
+  s.add_development_dependency  "sinatra"
 end
   

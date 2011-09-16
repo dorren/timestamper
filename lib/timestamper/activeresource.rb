@@ -7,7 +7,7 @@ module ActiveResource
       
       private 
       def new_with_timestamper(*args)
-        returning new_without_timestamper(*args) do |record|
+        new_without_timestamper(*args).tap do |record|
           next if !Timestamper.configuration.reportable?(record.class)  # return triggers "LocalJumpError: unexpected return"
           
           column = @timestamper_column || Timestamper.configuration.updated_at_column
