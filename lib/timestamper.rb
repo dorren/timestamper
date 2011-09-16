@@ -1,5 +1,5 @@
 require 'singleton'
-require 'activeresource'
+require 'active_resource'
 require 'timestamper/timestamper'
 require 'timestamper/activeresource'
 require 'timestamper/configuration'
